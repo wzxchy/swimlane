@@ -1,0 +1,8 @@
+gateway:
+  hostname: '*'
+  httpsRedirect: false
+  selector: ingressgateway
+  tls:
+    enabled: false
+    gatewayNamespace: istio-system
+    secretName: bookinfo-tls
