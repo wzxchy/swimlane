@@ -58,14 +58,14 @@ metadata:
   name: swimlane-mocka
 spec:
   hosts:
-    - "mocka.default.svc.cluster.local"
+    - "mocka.fulllink.svc.cluster.local"
   http:
     - match:
         - uri:
             exact: /mock
       route:
         - destination:
-            host: mocka
+            host: mocka.fulllink.svc.cluster.local
             subset: $userdefinelabel1
 
 ---
@@ -75,14 +75,14 @@ metadata:
   name: swimlane-mockb
 spec:
   hosts:
-    - "mockb.default.svc.cluster.local"
+    - "mockb.fulllink.svc.cluster.local"
   http:
     - match:
         - uri:
             exact: /mock
       route:
         - destination:
-            host: mockb
+            host: mockb.fulllink.svc.cluster.local
             subset: $userdefinelabel1
 
 ---
@@ -92,14 +92,14 @@ metadata:
   name: swimlane-mockc
 spec:
   hosts:
-    - "mockc.default.svc.cluster.local"
+    - "mockc.fulllink.svc.cluster.local"
   http:
     - match:
         - uri:
             exact: /mock
       route:
         - destination:
-            host: mockc
+            host: mockc.fulllink.svc.cluster.local
             subset: $userdefinelabel1
 
 ---
