@@ -61,7 +61,7 @@ spec:
     - "mocka.fulllink.svc.cluster.local"
   http:
     - match:
-        - uri:
+      - uri:
             exact: /mock
       route:
         - destination:
@@ -78,7 +78,7 @@ spec:
     - "mockb.fulllink.svc.cluster.local"
   http:
     - match:
-        - uri:
+      - uri:
             exact: /mock
       route:
         - destination:
@@ -95,7 +95,7 @@ spec:
     - "mockc.fulllink.svc.cluster.local"
   http:
     - match:
-        - uri:
+      - uri:
             exact: /mock
       route:
         - destination:
