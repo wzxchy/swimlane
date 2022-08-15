@@ -62,11 +62,11 @@ spec:
   http:
     - match:
       - uri:
-            exact: /mock
+            exact: /
       route:
       - destination:
             host: mocka.fulllink.svc.cluster.local
-            subset: v1
+            subset: $userdefinelabel1
 
 ---
 apiVersion: networking.istio.io/v1alpha3
@@ -79,11 +79,11 @@ spec:
   http:
     - match:
       - uri:
-            exact: /mock
+            exact: /
       route:
       - destination:
             host: mockb.fulllink.svc.cluster.local
-            subset: v1
+            subset: $userdefinelabel1
 
 ---
 apiVersion: networking.istio.io/v1alpha3
@@ -96,11 +96,11 @@ spec:
   http:
     - match:
       - uri:
-            exact: /mock
+            exact: /
       route:
       - destination:
             host: mockc.fulllink.svc.cluster.local
-            subset: v1
+            subset: $userdefinelabel1
 
 ---
 apiVersion: networking.istio.io/v1alpha3
