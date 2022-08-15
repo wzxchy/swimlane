@@ -52,7 +52,57 @@ spec:
 
 
 ---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: swimlane-mocka
+spec:
+  hosts:
+    - "mocka.default.svc.cluster.local"
+  http:
+    - match:
+        - uri:
+            exact: /mock
+      route:
+        - destination:
+            host: mocka
+            subset: $releaselabel
 
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: swimlane-mockb
+spec:
+  hosts:
+    - "mockb.default.svc.cluster.local"
+  http:
+    - match:
+        - uri:
+            exact: /mock
+      route:
+        - destination:
+            host: mockb
+            subset: $releaselabel
+
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: swimlane-mockc
+spec:
+  hosts:
+    - "mockc.default.svc.cluster.local"
+  http:
+    - match:
+        - uri:
+            exact: /mock
+      route:
+        - destination:
+            host: mockc
+            subset: $releaselabel
+
+---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
