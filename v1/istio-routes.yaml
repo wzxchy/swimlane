@@ -64,7 +64,7 @@ spec:
       - uri:
             exact: /mock
       route:
-        - destination:
+      - destination:
             host: mocka.fulllink.svc.cluster.local
             subset: v1
 
@@ -81,7 +81,7 @@ spec:
       - uri:
             exact: /mock
       route:
-        - destination:
+      - destination:
             host: mockb.fulllink.svc.cluster.local
             subset: v1
 
@@ -98,7 +98,7 @@ spec:
       - uri:
             exact: /mock
       route:
-        - destination:
+      - destination:
             host: mockc.fulllink.svc.cluster.local
             subset: v1
 
