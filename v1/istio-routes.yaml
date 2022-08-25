@@ -21,7 +21,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - swimelane-gateway
+  - swimlane-gateway
   http:
   - match:
     - uri:
