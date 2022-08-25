@@ -158,19 +158,19 @@ spec:
     version: v4
 
 ---
-apiVersion: istio.alibabacloud.com/v1beta1
-kind: TrafficLabel
-metadata:
-  name: example1
-  namespace: fulllink
-spec:
-  hosts:
-    - '*'
-  rules:
-    - attachTo:
-        - opentracing
-      labels:
-        - name: userdefinelabel1
-          valueFrom:
-            - $localLabel
-      protocols: '*'
+#apiVersion: istio.alibabacloud.com/v1beta1
+#kind: TrafficLabel
+#metadata:
+#  name: example1
+#  namespace: fulllink
+#spec:
+#  hosts:
+#    - '*'
+#  rules:
+#    - attachTo:
+#        - opentracing
+#      labels:
+#        - name: userdefinelabel1
+#          valueFrom:
+#            - $localLabel
+#      protocols: '*'
