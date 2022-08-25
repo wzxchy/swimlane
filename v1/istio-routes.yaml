@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: test-gateway
+  name: swimlane-gateway
 spec:
   selector:
     istio: ingressgateway
@@ -158,4 +158,19 @@ spec:
     version: v4
 
 ---
-
+apiVersion: istio.alibabacloud.com/v1beta1
+kind: TrafficLabel
+metadata:
+  name: example1
+  namespace: fulllink
+spec:
+  hosts:
+    - '*'
+  rules:
+    - attachTo:
+        - opentracing
+      labels:
+        - name: userdefinelabel1
+          valueFrom:
+            - $localLabel
+      protocols: '*'
