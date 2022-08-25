@@ -153,10 +153,6 @@ spec:
   - name: v3
     labels:
       version: v3
-  - name: v4
-    labels:
-      version: v4
-
 ---
 #apiVersion: istio.alibabacloud.com/v1beta1
 #kind: TrafficLabel
